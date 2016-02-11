@@ -12,7 +12,7 @@ The next project in the course was a bit more open ended.  The requirements were
 
 This is the time of year that I start to get really into college basketball.  If I'm not coding or at work, I'm likely watching angry old men yell at 18 year olds because they missed a free throw.  It's awesome.  When there aren't any games on, I start looking at stats.  So naturally, this is what I decided to build my gem around.  
 
-The gem scrapes from [http://espn.go.com/mens-college-basketball/rankings] and returns an up to date list of the top 25 teams in the nation.  At that point, the user can select a specific team from the list to see what their current record is.  Once the user has selected a specific team, they have the option to look up the latest tweet from the team or get info on their next match up.
+The gem scrapes from [[http://espn.go.com/mens-college-basketball/rankings]] and returns an up to date list of the top 25 teams in the nation.  At that point, the user can select a specific team from the list to see what their current record is.  Once the user has selected a specific team, they have the option to look up the latest tweet from the team or get info on their next match up.
 
 Here's a quick walkthrough:
 
@@ -37,7 +37,7 @@ It's a bit sloppy, but it works.  The elsif portion accounts for 2 digit scenari
 
 Overall I have to say that I ended up enjoying this project more than I expected.  I found it really satisfying to build something that returns up to date info and dynamic content like most recent tweets.  I wanted to add more options and stats but more importantly, I need to keep learning.  
 
-Here's the repo if you want to check it out: [https://github.com/gormanjp/basketball-cli-gem]
+Here's the repo if you want to check it out: [[https://github.com/gormanjp/basketball-cli-gem]]
 
 
 
