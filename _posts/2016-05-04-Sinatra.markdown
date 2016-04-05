@@ -4,4 +4,24 @@ title:  "Sinatra Project"
 date:   2016-04-05 15:50:25 -0500
 categories: Learn Verified
 ---
-New Post
+Sinatra App Project
+
+The next project for the Learn Verified course is a simple MVC Sinatra app that utilizes ActiveRecord.  It is required to have multiple models, at least one has many relationship, user accounts, and form validation.  I decided to build a simple To Do app with a checklist component for repetitious tasks.  
+
+Screenshot
+
+The basic setup of the database and models was pretty straightforward.  The app has three tables.  One for Users, one for Lists, and one for Items.  Users have many lists and lists have many items.  Users have a Username and Password.  Lists have a name.  And Items have content, frequency and checks which is a variable that gets updated as the user checks off list items.  
+
+After building out the main framework of the app, I ran into some issues figuring out how to alert the users if they tried to enter bad data (blank username on signup, blank list name etc, username taken etc.)  After much trial and error, I figured out how to use the :locals variable in the controller to set a variable that could be accessed in the resulting erb file.  
+
+Code snippet from controller
+
+code snippet from corresponding era file.  
+
+I also added a bit of bootstrap to make the nav bar and alert messages look a little bit better that plain old html.  Here’s a quick demo:
+
+Youtube link
+
+https://github.com/gormanjp/sinatra-project
+
+Thanks for checking it out!   
