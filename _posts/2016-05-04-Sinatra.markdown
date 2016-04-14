@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Sinatra Project"
-date:   2016-04-05 15:50:25 -0500
+date:   2016-04-04 15:50:25 -0500
 categories: Learn Verified
 ---
 Sinatra App Project
 
 The next project for the Learn Verified course is a simple MVC Sinatra app that utilizes ActiveRecord.  It is required to have multiple models, at least one has many relationship, user accounts, and form validation.  I decided to build a simple To Do app with a checklist component for repetitious tasks.  
 
-Screenshot
+![App Screenshot]({{ http://gormanjp.github.io/blog/ }}/assets/screenshot.png)
 
 The basic setup of the database and models was pretty straightforward.  The app has three tables.  One for Users, one for Lists, and one for Items.  Users have many lists and lists have many items.  Users have a Username and Password.  Lists have a name.  And Items have content, frequency and checks which is a variable that gets updated as the user checks off list items.  
 
