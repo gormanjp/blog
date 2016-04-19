@@ -7,21 +7,63 @@ categories: Learn Verified
 Sinatra App Project
 
 The next project for the Learn Verified course is a simple MVC Sinatra app that utilizes ActiveRecord.  It is required to have multiple models, at least one has many relationship, user accounts, and form validation.  I decided to build a simple To Do app with a checklist component for repetitious tasks.  
+<br>
 
-![App Screenshot]({{ http://gormanjp.github.io }}/blog/assets/screenshot.png)
+<img src="/blog/assets/screenshot.png" height="200px" border="1px"><br><br>
 
 The basic setup of the database and models was pretty straightforward.  The app has three tables.  One for Users, one for Lists, and one for Items.  Users have many lists and lists have many items.  Users have a Username and Password.  Lists have a name.  And Items have content, frequency and checks which is a variable that gets updated as the user checks off list items.  
 
 After building out the main framework of the app, I ran into some issues figuring out how to alert the users if they tried to enter bad data (blank username on signup, blank list name etc, username taken etc.)  After much trial and error, I figured out how to use the :locals variable in the controller to set a variable that could be accessed in the resulting erb file.  
 
-Code snippet from controller
+Here's an example validating from the users controller validating the signup inputs:
+{% highlight ruby %}
+ post '/signup' do 
+    if params[:username] == 'Username' || params[:password] == 'password'
+       erb :'users/signup', :locals => {:message => 'error'}
+    elsif User.find_by(:username => params[:username])
+      erb :'users/signup', :locals => {:message => 'same'}
+    elsif params[:username].empty? || params[:password].empty?
+      erb :'users/signup', :locals => {:message => 'empty'}
+    else
+    	@user = User.create(:username => params[:username], :password => params[:password])
+    	@user.save
+    	session[:id] = @user[:id]
+      if @user.save
+        redirect '/home'
+      else
+  		  erb :'users/signup', :locals => {:message => 'message'}
+      end
+  	end
+  end
+{% endhighlight %}
 
-code snippet from corresponding era file.  
+The error messaging code in the users/signup view:
+{% highlight ruby %}
+<% if message == 'empty' %>
+  <div class="alert alert-danger">
+  <strong>Try Again!</strong> Username and password must be filled in.
+</div>
+<% end %>
 
-I also added a bit of bootstrap to make the nav bar and alert messages look a little bit better that plain old html.  Here’s a quick demo:
+<% if message == 'error' %>
+  <div class="alert alert-danger">
+  <strong>Try Again!</strong> Username cannot be Username
+</div>
+<% end %>
 
-Youtube link
+<% if message == 'same' %>
+  <div class="alert alert-danger">
+  <strong>Try Again!</strong> Username already taken.
+</div>
+<% end %>
+{% endhighlight %}
+ 
 
-https://github.com/gormanjp/sinatra-project
+I also incorporated bootstrap to give the navbar and alert messages a bit of styling.  Here’s a quick demo:
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/qKPqT4xKFwc" frameborder="0" allowfullscreen></iframe>
+
+Here's the project on <a href="https://github.com/gormanjp/sinatra-project">github</a>.
+
 
 Thanks for checking it out!   
