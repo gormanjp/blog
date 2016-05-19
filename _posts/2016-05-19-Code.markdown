@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Code"
+date:   2016-05-19 15:50:25 -0500
+categories: Learn Verified
+---
+
+A brief bit on why I decided to learn to code.
+
+My father had always wanted to work for the US Forest Service.  He even studied agricultural engineering in college.  Then, at some point along the way, his plans changed and he became a software engineer.  Growing up, his job was never something that I found interesting.  I visited his office from time to time and nothing about his workplace or what he did peaked my interest.  I would sometimes wonder how he drifted from the idea of romping around the forest to the reality of sitting behind a computer all week.  That's not to say that he didn't enjoy what he did.  He a had a clear passion for his work and even in his retirement, still writes programs from time to time.  
+
+A few years ago, I went on a trip with a freelance web designer/developer who builds small sites for local businesses.  At this point I had begun to dabble with the idea of programming but hadn't made any serious strides into learning web development. After talking with my friend and seeing the work that he was doing and how much he enjoyed it, I decided it was something that I really wanted to do.  Shortly after I got back from this trip, I decided to take a more serious plunge into web development and eventually came across Learn.   
+
+I've only recently come to the realization that I'm entering into the same industry that my father once occupied.  The job that I once thought of as boring or tedious, has a completely new appeal to me with a staggering variety of opportunities.  The industry has certainly changed since my father began 25 years ago, but now we have a common understanding, a shared intrigue of creating something with code.  
